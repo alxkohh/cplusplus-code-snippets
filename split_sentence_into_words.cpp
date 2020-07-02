@@ -13,12 +13,18 @@ vector<string> split(string sentence) {
     
     string word = "";
     
-    for (char c: sentence) {
+    for (int i = 0; i < sentence.size(); i++) {
         
-        if (c != ' ') {
-            word = word + c;
+        if (sentence.at(i) != ' ') {
+            word = word + sentence.at(i);
+            
+            // we are at EOF already. no more space to meet.
+            // just left with pushing the final word into the vector.
+            if (i == sentence.size() - 1) {
+                words.push_back(word);
+            }
         } else {
-            // word is complete. push it into vector.
+            // meet space means word is complete. push it into vector.
             words.push_back(word);
             word = "";
         }
