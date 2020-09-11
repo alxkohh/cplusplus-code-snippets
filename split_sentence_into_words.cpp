@@ -1,34 +1,24 @@
-/*
-Splits a sentence into words. Words are stored in a vector of strings. Basically emulates the java split method.
-Standard library alternatives include strtok and string stream. This method is self implemented.
-*/
+// Splits a sentence into words.
+// C++ currently does not have a built-in split() method
 
-#include <string>
-#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
 
-vector<string> split(string sentence) {
+int main() {
+
+    // getline to read the entire line (sentence)
+    string line;
+    getline(cin, line);
+
+    stringstream tokenStream(line);
+    string token;
+    vector<string> tokens;
     
-    vector<string> words;
-    
-    string word = "";
-    
-    for (int i = 0; i < sentence.size(); i++) {
-        
-        if (sentence.at(i) != ' ') {
-            word = word + sentence.at(i);
-            
-            // we are at EOF already. no more space to meet.
-            // just left with pushing the final word into the vector.
-            if (i == sentence.size() - 1) {
-                words.push_back(word);
-            }
-        } else {
-            // meet space means word is complete. push it into vector.
-            words.push_back(word);
-            word = "";
-        }
+    while (tokenStream >> token) {
+        tokens.push_back(token);
     }
 
-    return words;
+    // tokens now contain all the individual words
+
+    return 0;
 }
