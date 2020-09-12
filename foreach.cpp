@@ -9,7 +9,7 @@ int main() {
 
     vector<string> strings {"first", "second","third"};
 
-    for (string s: strings) {
+    for (string s : strings) {
         cout << s << "\n";
     }
 
