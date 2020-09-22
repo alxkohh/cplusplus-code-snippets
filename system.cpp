@@ -10,6 +10,10 @@ on your command line.
 #include <bits/stdc++.h>
 using namespace std;
 
+/*
+Helper function called inside main()
+For an explanation of this function, refer to std_string_to_char_ptr.cpp
+*/
 char* toCharPtr(string s) {
     return &*s.begin();
 }
