@@ -1,5 +1,8 @@
-// Include the entire C++ std lib
-// Use this for one-off coding challenges, not software projects
+/*
+Include the entire C++ std lib
+Use this for coding challenges, not software projects
+*/
+
 
 #include <bits/stdc++.h>
 using namespace std;

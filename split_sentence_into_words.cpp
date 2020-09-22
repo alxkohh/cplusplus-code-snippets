@@ -1,5 +1,9 @@
-// Splits a sentence into words.
-// C++ currently does not have a built-in split() method
+/*
+Splits a sentence into words.
+Commonly required in coding challenges, during input reading.
+Analagous to split() in Java and Python
+*/
+
 
 #include <bits/stdc++.h>
 using namespace std;
