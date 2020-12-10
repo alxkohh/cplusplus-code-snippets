@@ -3,6 +3,7 @@ Split a string by whitespace.
 Analogous to python and java split() by whitespace.
 */
 
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -18,7 +19,6 @@ vector<string> split(string str) {
 
     return tokens;
 }
-
 
 int main() {
 
