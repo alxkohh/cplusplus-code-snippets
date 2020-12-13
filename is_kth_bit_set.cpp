@@ -20,13 +20,13 @@ bool isKthBitSet(int bitString, int k) {
 
 int main() {
 
-    if (isKthBitSet(5, 2)) {
+    if (isKthBitSet(10, 3)) {
         cout << "yes";
     } else {
         cout << "no";
     }
 
-    // Since 5 is 101 in binary, "yes" is printed out
+    // Since 10 is 1010 in binary, the 3rd bit is 1. Hence "yes" is printed out
 
     return 0;
 }
