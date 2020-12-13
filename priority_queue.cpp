@@ -16,6 +16,8 @@ using namespace std;
 
 int main() {
 
+    // Preliminary note: STL heaps are Max heaps by default.
+
     // 1. Instantiate empty Max heap
     priority_queue<int> emptyMaxPQ;
 
