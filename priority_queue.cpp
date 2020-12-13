@@ -1,7 +1,7 @@
 /*
-The STL priority queue is a Max heap.
-This program illustrates how to instantiate a Max
-priority queue from an array. ie. Build heap in O(n) time.
+The STL priority queue is a Max heap by default.
+This program shows how to build a Max heap in O(n) time,
+and how to build a Min heap in O(n) time.
 */
 
 
@@ -14,7 +14,9 @@ int main() {
 
     priority_queue<int> pq; // empty priority queue, which is not what we want
 
-    priority_queue<int> maxPQ (nums, nums + 5);     // Build heap in O(n) time
+    priority_queue<int> maxPQ (nums, nums + 5);     // Build Max heap in O(n) time from array
+    
+    priority_queue<int, greater<int> > minPQ (nums, nums + 5);  // Build Min heap in O(n) time from array
 
     while (!maxPQ.empty()) {
         cout << maxPQ.top() << " ";
