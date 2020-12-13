@@ -1,7 +1,13 @@
 /*
-The STL priority queue is a Max heap by default.
-This program shows how to build a Max heap in O(n) time,
-and how to build a Min heap in O(n) time.
+Instantiating STL heaps (priority queues) can be quite tricky.
+It is not well documented, which is rare of the C++ community.
+
+This program will demonstrate how to
+
+1. Instantiate empty Max heap
+2. Instantiate empty Min heap
+3. Build Max heap in O(n) time, from vector
+4. Build Max heap in O(n) time, from vector
 */
 
 
@@ -10,20 +16,27 @@ using namespace std;
 
 int main() {
 
-    int nums[5] = {7,9,2,1,30};
+    // 1. Instantiate empty Max heap
+    priority_queue<int> emptyMaxPQ;
 
-    priority_queue<int> pq; // empty priority queue, which is not what we want
+    // 2. Instantiate empty Min heap
+    priority_queue<int, vector<int>, greater<int> > emptyMinPQ;
 
-    priority_queue<int> maxPQ (nums, nums + 5);     // Build Max heap in O(n) time from array
     
-    priority_queue<int, greater<int> > minPQ (nums, nums + 5);  // Build Min heap in O(n) time from array
+    vector<int> v = {7,9,2,1,30};
 
-    while (!maxPQ.empty()) {
-        cout << maxPQ.top() << " ";
-        maxPQ.pop();
+    // 3. Build Max heap in O(n) time, from vector
+    priority_queue<int> maxPQ (v.begin(), v.end());     // This bracket syntax is actually calling a constructor
+
+    // 4. Build Min heap in O(n) time, from vector
+    priority_queue<int, vector<int>, greater<int> > minPQ (v.begin(), v.end());
+
+    while (!minPQ.empty()) {
+        cout << minPQ.top() << " ";
+        minPQ.pop();
     }
 
-    // 30 9 7 2 1 printed out
+    // 1 2 7 9 30 printed out
 
     return 0;
 }
