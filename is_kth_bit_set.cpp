@@ -2,7 +2,7 @@
 A function to determine if the k-th bit of a bit string is set.
 A bit is "set" means it is turned on / digit 1.
 
-0th bit is the left most bit. Officially called the LSB, least significant bit.
+0th bit is the right most bit. Officially called the LSB, least significant bit.
 */
 
 
