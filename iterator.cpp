@@ -5,12 +5,12 @@ in the container. In general, you can move the iterator forward and backward bas
 want to traverse the container.
 
 The advantage of using iterator based loops is that it is generic. It works for every STL container.
-Whereas you can only use index based for loops for array and vector.
+Whereas you can only use index based for loops when you are dealing with array and vector.
 
 You can of course go for range based for loops aka "for each" loop. But actually range based for loop
 is just syntactic sugar over iterator based loop. Also, you lose the ability to access a specific position
 of the container if you use range based for loop. You can think of an iterator as an index that allows you to
-access a specific position of the container - this is useful for several problems.
+access a specific position of the container, which is often very useful.
 */
 
 
