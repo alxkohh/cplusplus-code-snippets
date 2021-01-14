@@ -2,8 +2,8 @@
 When it comes to programming and computers (eg. UNIX systems), aliases are often useful.
 We typically like to give a short alias to a long name, for convenience in typing.
 
-C++ allows us to do that, by using reference. Examples are in lines 19 and 29.
-Line 19 creates an "int reference", while line 29 creates a "vector reference".
+C++ allows us to do that, by using reference. Examples are in lines 20 and 30.
+Line 20 creates an "int reference", while line 30 creates a "vector reference".
 */
 
 
