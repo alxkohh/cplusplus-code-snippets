@@ -11,6 +11,7 @@ using namespace std;
 
 
 int ctoi(char c) {
+
     int i = c - '0';    // ASCII magic in action!
     return i;
 }
