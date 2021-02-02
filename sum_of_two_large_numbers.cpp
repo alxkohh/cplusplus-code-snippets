@@ -22,7 +22,7 @@ int ctoi(char c) {
     return i;
 }
 
-string padWithLeadingZeroes(string s, int numOfLeadingZeroes) {
+void padWithLeadingZeroes(string& s, int numOfLeadingZeroes) {
 
     string leadingZeroes;
 
@@ -31,16 +31,26 @@ string padWithLeadingZeroes(string s, int numOfLeadingZeroes) {
         leadingZeroes += '0';
     }
 
-    string res = leadingZeroes + s;
-
-    return res;
+    s = leadingZeroes + s;
 }
 
-/* 
-    string a and string b must be of the same length.
-    If one string is shorter, pad it with leading zeroes first, before calling this function.
-*/
-string add(string a, string b) {
+string add(string& a, string& b) {
+
+    if (a.size() > b.size()) {
+        
+        // b is shorter, so pad b with leading zeroes
+
+        int numOfLeadingZeroes = a.size() - b.size();
+        padWithLeadingZeroes(b, numOfLeadingZeroes);
+
+    } else if (b.size() > a.size()) {
+        
+        // a is shorter, so pad a with leading zeroes
+
+        int numOfLeadingZeroes = b.size() - a.size();
+        padWithLeadingZeroes(a, numOfLeadingZeroes);
+    }
+
 
     string res;
 
@@ -104,7 +114,9 @@ string add(string a, string b) {
 
 int main() {
 
-    string sum = add("199", "001");     // "1" must be padded to "001"
+    string a = "199";
+    string b = "1";
+    string sum = add(a, b);
 
     cout << sum;    // 200 printed to console
 
